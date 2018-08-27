@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root {
+    --primary-color: rgba(94, 180, 251, 0.85);
+    --primary-hover: rgba(94, 180, 251, 0.95);
+    --submit-color: rgba(29, 54, 165, 0.85);
+    --submit-hover: rgba(29, 54, 165, 0.95);
+    --danger-color: rgba(255, 19, 19, 0.85);
+    --danger-hover: rgba(255, 19, 19, 0.95);
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin: 1rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-top: .5rem;
+}
+
+input {
+    display: block;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+.container {
+    margin: 1.5rem;
+}
+
+.blog-post {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 2px 2px 6px rgba(100, 100, 200, 0.3);
+    padding: 1rem;
+    margin-bottom: 1rem;
+} 
+
+.btn {
+    display: inline-block;
+    padding: .7rem 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-submit {
+    background-color: var(--submit-color);
+}
+
+.btn-submit:hover {
+    background-color: var(--submit-hover);
+}
+
+.button-right {
+    float: right;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    border: 0;
+}
+
+.btn-danger:hover {
+    background-color: var(--danger-hover);
+}
