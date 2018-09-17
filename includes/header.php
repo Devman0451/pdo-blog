@@ -8,3 +8,4 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<?php include_once 'navbar.php';?>

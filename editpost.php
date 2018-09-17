@@ -24,7 +24,7 @@
 ?>
 
 <?php include('includes/header.php')?>
-    <div class="container">
+    <section class="container">
         <h1>Edit Post</h1>
         <form action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
             <div class="form-group">
@@ -43,5 +43,5 @@
             <input type="submit" class="btn btn-submit" value="Submit" name="submit">
             <a href="<?php echo ROOT_URL; ?>" class="btn btn-primary">Back</a>
         </form>
-    </div> 
+    </section> 
 <?php include('includes/footer.php')?>

@@ -87,3 +87,51 @@ input[type="text"] {
 .btn-danger:hover {
     background-color: var(--danger-hover);
 }
+
+
+/*Navbar*/
+
+.navbar {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-hover);
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    color: white;
+}
+
+.navbar-item > a {
+    color: white;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.logo {
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+
+/*Signup*/
+
+.container.signup {
+    width: 100%;
+    margin: 1.5 0;
+}
+
+.form-signup {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.form-signup > input {
+    width: 200px;
+    padding: 5px 0;
+}

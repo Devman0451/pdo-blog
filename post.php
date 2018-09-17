@@ -21,7 +21,7 @@
 ?>
 
 <?php include('includes/header.php')?>
-    <div class="container">
+    <section class="container">
             <div class="blog-post">
                 <h1><?php echo $post['title']; ?></h1>
                 <small>Posted on <?php echo $post['created_at']?> by <?php echo $post['author']; ?></small>
@@ -33,5 +33,5 @@
                 <a href="<?php echo ROOT_URL; ?>editpost.php?id=<?php echo $post['id']; ?>" class="btn btn-primary">Edit Post</a>
                 <a href="<?php echo ROOT_URL; ?>" class="btn btn-primary">Back</a>
             </div>
-    </div> 
+    </section> 
 <?php include('includes/footer.php')?>

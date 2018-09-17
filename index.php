@@ -9,7 +9,7 @@
 ?>
 
 <?php include('includes/header.php')?>
-    <div class="container">
+    <section class="container">
     <a href="<?php echo ROOT_URL?>addpost.php" class="btn btn-submit">Add New Post</a>
         <h1>Posts</h1>
         <?php foreach($posts as $post) : ?>
@@ -20,5 +20,5 @@
                 <a href="<?php echo ROOT_URL?>post.php?id=<?php echo $post['id'];?>" class="btn btn-primary">Read</a>
             </div>
         <?php endforeach; ?>
-    </div> 
+    </section> 
 <?php include('includes/footer.php')?>
