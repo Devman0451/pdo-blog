@@ -2,10 +2,17 @@
 
     require('config/connect.php');
 
+    session_start();
+
+    if (!isset($_SESSION['username'])) {
+        header('Location: index.php');
+        exit();
+    }
+
     if(isset($_POST['submit'])){
         $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
         $body = filter_var($_POST['body'], FILTER_SANITIZE_SPECIAL_CHARS);
-        $author = filter_var($_POST['author'], FILTER_SANITIZE_STRING);  
+        $author = filter_var($_SESSION['username'], FILTER_SANITIZE_STRING);  
     
         $sql = "INSERT INTO posts(title, author, body) VALUES (:title, :author, :body)";
         $query = $pdo->prepare($sql);
@@ -24,10 +31,10 @@
                 <label>Title</label>
                 <input type="text" class="form-input" name="title" >
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Author</label>
                 <input type="text" class="form-input" name="author" >
-            </div>
+            </div> -->
             <div class="form-group">
                 <label>Body</label>
                 <input type="text" class="form-input" name="body" >

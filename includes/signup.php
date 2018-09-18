@@ -1,4 +1,10 @@
 <?php
+    session_start();
+
+    if (isset($_SESSION['username'])) {
+        header('Location: ../index.php');
+        exit();
+    }
 
     if (isset($_POST['submit'])) {
         include_once '../config/connect.php';
@@ -15,9 +21,9 @@
                 header("Location: ../signup.php?signup=invalid");
                 exit();
             } else {
-                $sql = "SELECT * FROM users WHERE username=?";
+                $sql = "SELECT * FROM users WHERE username=? OR email=?";
                 $query = $pdo->prepare($sql);
-                $query->execute([$username]);
+                $query->execute([$username, $email]);
                 
                 if($query->rowCount()) {
                     header("Location: ../signup.php?signup=usertaken");

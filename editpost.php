@@ -5,12 +5,11 @@
     if(isset($_POST['submit'])){
         $update_id = filter_var($_POST['update_id'], FILTER_SANITIZE_NUMBER_INT);
         $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
-        $body = filter_var($_POST['body'], FILTER_SANITIZE_SPECIAL_CHARS);
-        $author = filter_var($_POST['author'], FILTER_SANITIZE_STRING);   
+        $body = filter_var($_POST['body'], FILTER_SANITIZE_SPECIAL_CHARS); 
     
-        $sql = "UPDATE posts SET title = :title, author = :author, body = :body WHERE id = :update_id";
+        $sql = "UPDATE posts SET title = :title, body = :body WHERE id = :update_id";
         $query = $pdo->prepare($sql);
-        $query->execute(['title' => $title, 'author' => $author, 'body' => $body, 'update_id' => $update_id]);
+        $query->execute(['title' => $title, 'body' => $body, 'update_id' => $update_id]);
 
         header('Location: ' . ROOT_URL . "");
     }
@@ -30,10 +29,6 @@
             <div class="form-group">
                 <label>Title</label>
                 <input type="text" class="form-input" name="title" value="<?php echo $post['title']; ?>" >
-            </div>
-            <div class="form-group">
-                <label>Author</label>
-                <input type="text" class="form-input" name="author" value="<?php echo $post['author']; ?>" >
             </div>
             <div class="form-group">
                 <label>Body</label>
